@@ -226,18 +226,91 @@ body {
     margin-right: 5%; /* Right margin of 60% */
 }
 
+/* ######### */
+
 
 .margin-top-class-time {
     margin-top: 2vh;
 }
 
+/* ######### */
 
-.margin-top-class-location {
-    font-size: 0.9rem; /* Adjust the font size as needed */
-    color: #73757c; /* Set the color to #c9cacf */
-    margin-top: 2vh;
+/* Style for the location container */
+.location-container {
+    display: flex; /* Display elements in a row */
+    align-items: baseline; /* Centrally align the icon and paragraph */
+    gap: 0.5rem; /* Set a gap between the icon and the paragraph */
+    color: #73757c; /* Set the color for both the icon and the paragraph */
 }
 
+/* Style for the paragraph element */
+.margin-top-class-location {
+    font-size: 0.9rem; /* Adjust the font size as needed */
+    color: inherit; /* Inherit color from the parent container */
+    margin-top: 2vh; /* Top margin for the paragraph */
+}
+
+
+/* ######### */
+
+
+
+.timeline-container {
+    margin-top: 5vh;
+}
+
+/* Style for the timeline container */
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Style for each timeline item */
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Margin between each item */
+}
+/* Style for the address with ellipsis */
+.address {
+    max-width: inherit; /* Set the maximum width the text can occupy, adjust as needed */
+    white-space: nowrap; /* Prevents the text from wrapping */
+    overflow: hidden; /* Hides any overflowing text */
+    text-overflow: ellipsis; /* Adds ellipsis when text overflows */
+}
+
+/* Style for the timeline marker */
+.timeline-marker {
+    margin-right: 20px; /* Space between marker and text */
+    font-weight: bold; /* Bold for the marker */
+    color: #282832; /* Color of the marker */
+}
+.timeline-container .timeline-item:nth-child(2) {
+    color: red; /* Sets the text color to red for the second child */
+}
+
+/* Optional: Style for the text */
+.timeline-item p {
+    margin: 0; /* Remove default margin */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ######### */
 .summary {
     margin-bottom: 15px;
 }
