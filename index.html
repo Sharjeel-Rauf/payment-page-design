@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a50dc07351.js" crossorigin="anonymous" ></script>
+</head>
+
+<body>
+    <div class="container">
+         <!-- Left Panel -->
+         <div class="left-panel">
+            <div class="payment-container">
+                <h2>Enter payment info to book your ride</h2>
+                <h3 class="margin-top-class-payment-method">Your Payment Method</h3>
+                <div class="payment-method margin-top-class-payment-type">
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="credit-debit" checked>
+                        <div class="payment-flex">
+                            <span class="option-box"></span>
+                            <span class = "color-payment"><strong>Credit/Debit</strong></span>
+                        </div>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="paypal">
+                        <div class="payment-flex">
+                            <span class="option-box"></span>
+                            <span class = "color-payment"><strong>Paypal</strong></span>
+                        </div>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="apple-pay">
+                        <div class="payment-flex">
+                            <span class="option-box"></span>
+                            <span class = "color-payment"><strong>Apple Pay</strong></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="payment-info margin-top-class-card">
+                    <input type="text" id="card-number" name="card-number" placeholder="Card Number">
+
+                    <div class="card-info margin-top-class-card">
+                        <div class="expiration-date">
+                            <input placeholder="MM/YY" type="text" id="expiry-date" name="expiry-date" required>
+                        </div>
+                        <div class="cvv">
+                            <input placeholder="CVV" type="text" id="cvv" name="cvv" required>
+                        </div>
+                    </div>
+                </div>
+                <p class="margin-top-class-terms">
+                    Cancel anytime before 24 hours of the scheduled travel time via 
+                    <a href="#" class="bold-link">Trips</a> or 
+                    <a href="#" class="bold-link">Customer Support</a> to get a full refund, 
+                    otherwise 15% charges will be applicable. By clicking "Book Ride," you agree:
+                    You also agree to the 
+                    <a href="#" class="bold-link">Terms of Use</a> and 
+                    <a href="#" class="bold-link">Cancellation Terms</a>.
+                </p>
+                <button class="book-ride-button margin-top-class-button">Book Ride</button>
+            </div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="right-panel">
+            <div class="right-panel-container">
+                <p><strong>Toronto to Montreal</strong></p>
+
+                <p class="margin-top-class-time">Tuesday, November 19 at 9:30am</p>
+
+                <p class="margin-top-class-location">600m from location</p>
+
+                <p><strong>Pickup:</strong> 8 Maison, street 8, hills mall, 8934KMH</p>
+                <p><strong>Dropoff:</strong> 991 rue Saint-Antione o</p>
+                <p>2 Stops</p>
+                <p><strong>$20.00 / Seat</strong></p>
+                <p>2 seats available</p>
+
+                <div class="summary">
+                    <p><strong>Seats Subtotal:</strong> $20.00</p>
+                    <p><strong>VAT 13%:</strong> $3.00</p>
+                    <p><strong>Total:</strong> $23.00</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Sets container height to full viewport height */
+}
+
+/* Left and right panels */
+.left-panel,
+.right-panel {
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.left-panel {
+    border-right: 1px solid #e0e0e8; /* Border between the left and right panels */
+    height: 100%; /* Sets left panel height to full height */
+}
+
+.right-panel {
+    padding: 20px;
+    background-color: #f7f8f9; /* Background color of the right panel */
+    border-left: 1px solid #e0e0e8;
+    height: 100%; /* Sets right panel height to full height */
+}
+
+/* Flexbox layout for larger screens */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /* Left and right panels take specified proportions */
+    .left-panel {
+        width: 70%; /* Left panel width set to 60% */
+    }
+
+    .right-panel {
+        width: 30%; /* Right panel width set to 40% */
+        padding-left: 20px; /* Adds some spacing to right panel */
+    }
+}
+
+/* Styling elements within the left panel */
+
+.payment-container {
+    margin-top: 4%; /* Top margin of 20% */
+    margin-left: 9%; /* Left margin of 20% */
+    margin-right: 47%; /* Right margin of 60% */
+}
+
+
+
+.margin-top-class-payment-method {
+    margin-top: 8vh;
+}
+
+.margin-top-class-payment-type {
+    margin-top: 3vh;
+}
+
+
+.left-panel h2,
+.left-panel h3 {
+    margin-bottom: 10px;
+}
+
+
+
+
+/* ################################### */
+
+.color-payment {
+    color: #494951;
+}
+
+.payment-option input[type="radio"] {
+    display: none;
+}
+
+.payment-method {
+    display: flex; /* Set the display property to flex */
+    flex-direction: row; /* Arrange the items vertically */
+    width: 100%;
+    gap: 10px; /* Set the gap between the labels */
+}
+
+
+/* New class to handle flex container for span elements */
+.payment-flex {
+    display: flex; /* Set as flex container */
+    gap: 10px; /* Gap between elements */
+    align-items: center; /* Align elements center */
+}
+
+
+/* Ensure each payment-option element stretches to fill the available space */
+.payment-option {
+    display: flex;
+    flex: 1; /* Allow each payment-option element to take up equal space */
+    align-items: center;
+    justify-content: center; /* Center the content in each payment-option */
+    border: 2px solid #dedee3; /* Border for payment option */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding around option */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-bottom: 10px; /* Bottom margin between options */
+}
+
+/* Inner box styles */
+.option-box {
+    display: block; /* Allows the inner box to fill the label */
+    padding: 7px 10px; /* Padding inside the inner box */
+    background-color: #dedee3; /* Background color of inner box */
+    text-align: center; /* Center text */
+    margin-left: auto; /* Align inner box to the right */
+}
+
+/* Focus styles */
+.payment-option:focus-within, 
+.payment-option:hover {
+    border-color: #3b5ef6; /* Color change when focused or hovered */
+}
+
+
+/* ########################## */
+
+
+.margin-top-class-card {
+    margin-top: 2vh;
+}
+
+/* Input styling for card information */
+.payment-info input {
+    border: 2px solid #dedee3; /* Use the same border as payment-option */
+    border-radius: 5px; /* Use the same border radius as payment-option */
+    padding: 10px; /* Add padding around the input for consistent styling */
+    width: 100%; /* Make the input take up the full width of its container */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    margin-bottom: 10px; /* Add margin-bottom to separate inputs */
+    height: 40px; /* Set the desired height for the input box */
+}
+
+
+.payment-info label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.expiration-date,
+.cvv {
+    width: 48%;
+}
+
+.expiration-date input,
+.cvv input {
+    width: 100%;
+}
+
+/* ########################### */
+
+.margin-top-class-terms {
+    margin-top: 5vh;
+}
+
+
+
+
+.margin-top-class-button {
+    margin-top: 8vh;
+}
+
+/* Style for the bold links */
+.bold-link {
+    font-weight: bold; /* Make the text bold */
+    color: #282832; /* Set the color of the anchor tags */
+    text-decoration: underline; /* Add underline */
+    text-decoration-color: #b0b0b6; /* Change underline color to #b0b0b6 */
+}
+
+/* Reduce the font size of the paragraph */
+.margin-top-class-terms {
+    font-size: 0.8rem; /* Decrease the font size */
+}
+
+.book-ride-button {
+    background-color: #3b5ef6;
+    color: white;
+    padding: 10px 40px; /* Reduced padding for shorter height and increased padding for longer width */
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px; /* You can adjust the border-radius as needed */
+    cursor: pointer;
+    text-align: center;
+    display: block; /* Ensure the button takes up the full width of its container */
+    width: 40%; /* Set width to 100% to make the button stretch the full width of its parent container */
+}
+
+.book-ride-button:hover {
+    background-color: #0832ed; /* Color change on hover */
+}
+
+
+/* ############# */
+
+.right-panel-container {
+    margin-top: 12%; /* Top margin of 20% */
+    margin-left: 9%; /* Left margin of 20% */
+    margin-right: 5%; /* Right margin of 60% */
+}
+
+
+.margin-top-class-time {
+    margin-top: 2vh;
+}
+
+
+.margin-top-class-location {
+    font-size: 0.9rem; /* Adjust the font size as needed */
+    color: #73757c; /* Set the color to #c9cacf */
+    margin-top: 2vh;
+}
+
+.summary {
+    margin-bottom: 15px;
+}
