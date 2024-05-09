@@ -270,7 +270,7 @@ body {
 .timeline-item {
     display: flex;
     align-items: center;
-    margin-bottom: 20px; /* Margin between each item */
+    margin-bottom: 1px; /* Margin between each item */
 }
 /* Style for the address with ellipsis */
 .address {
@@ -286,8 +286,22 @@ body {
     font-weight: bold; /* Bold for the marker */
     color: #282832; /* Color of the marker */
 }
+
+
+/* Adjust the font size of the second timeline-item */
 .timeline-container .timeline-item:nth-child(2) {
-    color: red; /* Sets the text color to red for the second child */
+    font-size: 0.8rem; /* Adjust the font size as needed */
+    color: red; /* Keep the text color red */
+}
+
+/* If the .timeline-marker has a separate class, set its size here */
+.timeline-container .timeline-item:nth-child(2) .timeline-marker {
+    font-size: 0.8rem; /* Adjust the font size as needed */
+    color: red; /* Keep the color of the marker red */
+}
+/* Styling for the Dropoff span color */
+.timeline-container .timeline-item p span {
+    color: #3d3d40; /* Set the color to #a1a1aa */
 }
 
 /* Optional: Style for the text */
@@ -295,8 +309,42 @@ body {
     margin: 0; /* Remove default margin */
 }
 
+/* Style for the dotted line */
+.dotted-line {
+    border-left: 2px dashed #161d3d; /* Set a dashed line */
+    height: 100%; /* Fill the height of the container */
+    margin: 0 10px; /* Add margin for spacing */
+}
 
+/* Style for the dotted line */
+.dotted-line {
+    border-left: 1px dashed #1e1f20; /* Dotted line with 1px thickness and light gray color */
+    height: 50px; /* Adjust height as needed */
+    margin-left: 7px; /* Add margin to the left to position the line */
+    margin-bottom: 1px; /* Add margin to the bottom for space between the line and the next item */
+    margin-right: 10px; /* Add margin to the right for space between the line and the next item */
+}
 
+/* Adjust height to match timeline container */
+.timeline-container .dotted-line {
+    height: 12px; /* Adjust height as needed */
+}
+/* CSS style for the smaller red timeline item */
+.smaller-red-item {
+    color: red; /* Make the text color red */
+    font-size: 0.8rem; /* Reduce the font size, adjust as needed */
+}
+
+/* Optionally style the timeline marker within the smaller red item */
+.smaller-red-item .timeline-marker {
+    color: red; /* Make the marker color red */
+}
+
+/* ################## */
+
+.margin-top-class-money {
+    margin-top: 5vh;
+}
 
 
 
