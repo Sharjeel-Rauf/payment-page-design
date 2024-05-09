@@ -12,7 +12,27 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    height: 100vh; /* Sets container height to full viewport height */
+    height: 100vh;
+    padding: 20px; /* Add padding for spacing */
+}
+
+/* Adjust container for different screen sizes */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row; /* Horizontal layout for larger screens */
+        justify-content: space-between;
+        padding: 0; /* Remove padding */
+    }
+
+    /* Left and right panels proportions */
+    .left-panel {
+        width: 70%; /* 70% width for the left panel */
+    }
+
+    .right-panel {
+        width: 30%; /* 30% width for the right panel */
+        padding-left: 20px; /* Add spacing to the left of the right panel */
+    }
 }
 
 /* Left and right panels */
@@ -25,34 +45,32 @@ body {
 
 .left-panel {
     border-right: 1px solid #e0e0e8; /* Border between the left and right panels */
-    height: 100%; /* Sets left panel height to full height */
+    height: auto; /* Sets left panel height */
 }
 
 .right-panel {
-    padding: 20px;
     background-color: #f7f8f9; /* Background color of the right panel */
     border-left: 1px solid #e0e0e8;
-    height: 100%; /* Sets right panel height to full height */
+    height: auto; /* Sets right panel height */
 }
 
-/* Flexbox layout for larger screens */
-@media (min-width: 768px) {
+/* Media query for screen width below 768px */
+@media (max-width: 767px) {
     .container {
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column; /* Stack the panels vertically */
     }
 
-    /* Left and right panels take specified proportions */
-    .left-panel {
-        width: 70%; /* Left panel width set to 60% */
+    /* Set full width for each panel */
+    .left-panel,
+    .right-panel {
+        width: 100%; /* Panels should take up full width of the container */
+        margin-bottom: 10px; /* Add margin between panels */
     }
 
     .right-panel {
-        width: 30%; /* Right panel width set to 40% */
-        padding-left: 20px; /* Adds some spacing to right panel */
+        margin-top: 20px; /* Add margin to the top of the right panel for spacing */
     }
 }
-
 /* Styling elements within the left panel */
 
 .payment-container {
@@ -203,20 +221,33 @@ body {
 .book-ride-button {
     background-color: #3b5ef6;
     color: white;
-    padding: 10px 40px; /* Reduced padding for shorter height and increased padding for longer width */
+    padding: 10px 40px; /* Padding around the button */
     font-size: 1.2rem;
     border: none;
-    border-radius: 5px; /* You can adjust the border-radius as needed */
+    border-radius: 5px; /* Adjust border radius as needed */
     cursor: pointer;
     text-align: center;
-    display: block; /* Ensure the button takes up the full width of its container */
-    width: 40%; /* Set width to 100% to make the button stretch the full width of its parent container */
+    display: block; /* Ensure the button is a block element */
+    width: 40%; /* Initial width set to 40% */
 }
 
-.book-ride-button:hover {
-    background-color: #0832ed; /* Color change on hover */
+/* Media query to make button more responsive */
+@media (max-width: 480px) {
+    .book-ride-button {
+        width: 100%; /* Set button width to 100% for smaller screens */
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
 }
 
+/* Media query to make button more responsive */
+@media (max-width: 480px) {
+    .book-ride-button {
+        width: 100%; /* Set button width to 100% for smaller screens */
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+}
 
 /* ############# */
 
@@ -321,7 +352,7 @@ body {
     border-left: 1px dashed #1e1f20; /* Dotted line with 1px thickness and light gray color */
     height: 50px; /* Adjust height as needed */
     margin-left: 7px; /* Add margin to the left to position the line */
-    margin-bottom: 1px; /* Add margin to the bottom for space between the line and the next item */
+    margin-bottom: 3px; /* Add margin to the bottom for space between the line and the next item */
     margin-right: 10px; /* Add margin to the right for space between the line and the next item */
 }
 
@@ -346,18 +377,88 @@ body {
     margin-top: 5vh;
 }
 
+.price {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Style for the small seat text */
+.seat-text {
+    color: #73757c;
+    font-size: 0.9em;
+}
+
+/* ################## */
 
 
 
 
+/* Style for the line */
+.line {
+    background-color: #e0e0e8;
+    height: 1px; /* Adjust the height as desired */
+    width: 100%; /* Adjust the width as desired */
+}
 
+/* Class for margin top of 8vh */
+.margin-top-line {
+    margin-top: 8vh;
+}
+/* ############ */
 
+/* Style each row with display: flex */
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px; /* Optional: Add space between rows */
+}
 
+/* Style the quantity selector as a box with borders */
+.box-border {
+    border: 1px solid black; /* Adjust the border style and color as desired */
+    padding: 2px 10px; /* Adjust padding as desired */
+    border-radius: 3px; /* Optional: add border-radius for rounded corners */
+    display: inline-block; /* Ensure the span is displayed as an inline-block */
+}
 
+/* Style for the seats text */
+.seats-text {
+    color: black; /* Color is black */
+}
 
+/* Style for the subtotal text */
+.subtotal-text {
+    color: #73757c; /* Use a light gray color */
+}
 
+/* Style for the VAT text */
+.vat-text {
+    color: #b0b0b0; /* Use a lighter gray color than subtotal */
+}
 
+/* ######### */
 
+/* Style for the total text */
+.total-text {
+    color: black; /* Black color for "Total" */
+    font-weight: normal; /* Regular font weight for "Total" */
+}
+
+/* Style for the amount */
+.amount-text {
+    font-weight: bold; /* Bold font weight for the amount */
+}
+
+/* Style for the flex container */
+.flex-row {
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Space between elements */
+    align-items: center; /* Vertically center the elements */
+}
+.margin-top-class-total {
+    margin-top: 2vh;
+}
 /* ######### */
 .summary {
     margin-bottom: 15px;
