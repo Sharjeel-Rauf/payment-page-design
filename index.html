@@ -7,60 +7,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking Page</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a50dc07351.js" crossorigin="anonymous" ></script>
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a50dc07351.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="container">
-         <!-- Left Panel -->
-         <div class="left-panel">
+        <!-- Left Panel -->
+        <div class="left-panel">
             <div class="payment-container">
+                <!-- Title and subtitle -->
                 <h2>Enter payment info to book your ride</h2>
                 <h3 class="margin-top-class-payment-method">Your Payment Method</h3>
+                
+                <!-- Payment options -->
                 <div class="payment-method margin-top-class-payment-type">
+                    <!-- Credit/Debit option -->
                     <label class="payment-option">
                         <input type="radio" name="payment" value="credit-debit" checked>
                         <div class="payment-flex">
                             <span class="option-box"></span>
-                            <span class = "color-payment"><strong>Credit/Debit</strong></span>
+                            <span class="color-payment"><strong>Credit/Debit</strong></span>
                         </div>
                     </label>
+                    
+                    <!-- Paypal option -->
                     <label class="payment-option">
                         <input type="radio" name="payment" value="paypal">
                         <div class="payment-flex">
                             <span class="option-box"></span>
-                            <span class = "color-payment"><strong>Paypal</strong></span>
+                            <span class="color-payment"><strong>Paypal</strong></span>
                         </div>
                     </label>
+                    
+                    <!-- Apple Pay option -->
                     <label class="payment-option">
                         <input type="radio" name="payment" value="apple-pay">
                         <div class="payment-flex">
                             <span class="option-box"></span>
-                            <span class = "color-payment"><strong>Apple Pay</strong></span>
+                            <span class="color-payment"><strong>Apple Pay</strong></span>
                         </div>
                     </label>
                 </div>
+                
+                <!-- Payment information inputs -->
                 <div class="payment-info margin-top-class-card">
+                    <!-- Card number input -->
                     <input type="text" id="card-number" name="card-number" placeholder="Card Number">
 
+                    <!-- Expiration date and CVV inputs -->
                     <div class="card-info margin-top-class-card">
+                        <!-- Expiration date input -->
                         <div class="expiration-date">
                             <input placeholder="MM/YY" type="text" id="expiry-date" name="expiry-date" required>
                         </div>
+                        <!-- CVV input -->
                         <div class="cvv">
                             <input placeholder="CVV" type="text" id="cvv" name="cvv" required>
                         </div>
                     </div>
                 </div>
+
+                <!-- Terms and conditions paragraph -->
                 <p class="margin-top-class-terms">
                     Cancel anytime before 24 hours of the scheduled travel time via 
                     <a href="#" class="bold-link">Trips</a> or 
-                    <a href="#" class="bold-link">Customer Support</a> to get a full refund, 
-                    otherwise 15% charges will be applicable. By clicking "Book Ride," you agree:
-                    You also agree to the 
+                    <a href="#" class="bold-link">Customer Support</a> to get a full refund. 
+                    Otherwise, 15% charges will be applicable. By clicking "Book Ride," you agree to the 
                     <a href="#" class="bold-link">Terms of Use</a> and 
                     <a href="#" class="bold-link">Cancellation Terms</a>.
                 </p>
+                
+                <!-- Book Ride button -->
                 <button class="book-ride-button margin-top-class-button">Book Ride</button>
             </div>
         </div>
@@ -68,69 +86,85 @@
         <!-- Right Panel -->
         <div class="right-panel">
             <div class="right-panel-container">
+                <!-- Journey title -->
                 <p><strong>Toronto to Montreal</strong></p>
 
+                <!-- Journey date and time -->
                 <p class="margin-top-class-time">Tuesday, November 19 at 9:30am</p>
 
+                <!-- Location container -->
                 <div class="location-container">
                     <i class="fa-solid fa-location-dot"></i>
                     <p class="margin-top-class-location">600m from location</p>
                 </div>
+
+                <!-- Timeline container -->
                 <div class="timeline-container">
+                    <!-- Pickup location -->
                     <div class="timeline-item">
                         <div class="timeline-marker"><i class="fa-regular fa-circle"></i></div>
                         <p class="address"><span>Pickup:</span> 8 Maison, street 8, hills mall, 8934KMH</p>
                     </div>
+                    
+                    <!-- Dotted line separator -->
                     <div class="dotted-line"></div>
+                    
+                    <!-- Stops indicator -->
                     <div class="timeline-item smaller-red-item">
                         <div class="timeline-marker"><i class="fa-solid fa-circle"></i></div>
                         <p>2 Stops</p>
                     </div>
+                    
+                    <!-- Dotted line separator -->
                     <div class="dotted-line"></div>
+                    
+                    <!-- Dropoff location -->
                     <div class="timeline-item">
                         <div class="timeline-marker"><i class="fa-regular fa-circle-dot"></i></div>
-                        <p class="address"><span>Dropoff:</span> 991 rue Saint-Antione o</p>
+                        <p class="address"><span>Dropoff:</span> 991 rue Saint-Antoine O</p>
                     </div>
                 </div>
 
-
+                <!-- Price per seat and availability -->
                 <p class="margin-top-class-money">
                     <strong class="price">$20.00</strong> / <span class="seat-text">Seat</span>
-                    <p class="seat-text"> 2 seats available</p>
+                    <p class="seat-text">2 seats available</p>
                 </p>
 
+                <!-- Line separator -->
                 <div class="line margin-top-line"></div>
 
+                <!-- Cost breakdown -->
                 <div class="margin-top-class-money">
+                    <!-- Seats quantity selector -->
                     <div class="row">
                         <p class="seats-text">Seats</p>
                         <span class="box-border"> + 1 -</span>
                     </div>
+                    
+                    <!-- Subtotal -->
                     <div class="row">
                         <p class="subtotal-text"><strong>Subtotal:</strong></p>
                         <span class="subtotal-text">$20.00</span>
                     </div>
+                    
+                    <!-- VAT -->
                     <div class="row">
                         <p class="vat-text"><strong>VAT 13%:</strong></p>
                         <span class="subtotal-text">$3.00</span>
                     </div>
                 </div>
 
+                <!-- Line separator -->
                 <div class="line margin-top-line"></div>
 
+                <!-- Total cost -->
                 <div class="margin-top-class-total flex-row">
                     <p class="total-text"><strong>Total:</strong></p>
                     <span class="amount-text">$23.00</span>
                 </div>
-               
-
-                
             </div>
         </div>
-
-
-
-
     </div>
 </body>
 
