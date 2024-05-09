@@ -17,7 +17,7 @@
         <div class="left-panel">
             <div class="payment-container">
                 <!-- Title and subtitle -->
-                <h2>Enter payment info to book your ride</h2>
+                <h2 class="top-element">Enter payment info to book your ride</h2>
                 <h3 class="margin-top-class-payment-method">Your Payment Method</h3>
                 
                 <!-- Payment options -->
@@ -79,7 +79,7 @@
                 </p>
                 
                 <!-- Book Ride button -->
-                <button class="book-ride-button margin-top-class-button">Book Ride</button>
+                <button class="book-ride-button margin-top-class-button" onclick="showNotification()">Book Ride</button>
             </div>
         </div>
 
@@ -166,6 +166,47 @@
             </div>
         </div>
     </div>
+
+
+
+    <!-- Notification container -->
+    <div id="notification-container" class="notification-container">
+        <div class="notification-content">
+            <!-- Close button -->
+            <button class="close-button" onclick="closeNotification()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="notification-inner-content">
+                <!-- Car SVG image -->
+                <div class="car-svg">
+                    <!-- Replace the SVG image with a PNG image -->
+                    <img src="taxi.png" alt="Car booking image" width="100" height="100">
+                </div>
+                <!-- Notification message -->
+                <p><strong>Successfully Booked</strong></p>
+                <!-- Notification message -->
+                <p>Your ride has been successfully booked. To view or cancel the ride, go to <a href="#">trip page</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for showing and hiding the notification -->
+    <script>
+        function showNotification() {
+            // Show the notification container
+            document.getElementById('notification-container').style.display = 'flex';
+            // Apply blur effect to the page content container
+            document.querySelector('.container').style.filter = 'blur(3px)';
+        }
+
+        function closeNotification() {
+            // Hide the notification container
+            document.getElementById('notification-container').style.display = 'none';
+            // Remove blur effect from the page content container
+            document.querySelector('.container').style.filter = 'none';
+        }
+        
+    </script>
+
+    
 </body>
 
 </html>

@@ -507,7 +507,85 @@ body {
 .margin-top-class-total {
     margin-top: 2vh;
 }
-/* ######### */
-.summary {
-    margin-bottom: 15px;
+
+
+
+
+/* ################################################################################# */
+/* ################################################################################# */
+/* ################################################################################# */
+/* ################################################################################# */
+
+
+
+
+/* Style for the notification container */
+.notification-container {
+    display: none; /* Initially hidden */
+    position: fixed; /* Positioning */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for blur effect */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    z-index: 1000; /* Ensure it's on top */
+}
+/* Style for the notification content */
+.notification-content {
+    background-color: #fff; /* White background */
+    padding: 20px; /* Padding */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center-align text */
+    width: 80%; /* Adjust the width as desired */
+    max-width: 500px;
+    max-height: 80%; /* Allow max height to adjust with content */
+    display: flex; /* Use Flexbox */
+    flex-direction: column; /* Align items in column direction */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    position: relative; /* To position close button relative to this container */
+}
+
+/* Style for the inner notification content */
+.notification-inner-content {
+    width: 80%; /* Set the width to half of the parent container */
+    display: flex; /* Use Flexbox */
+    flex-direction: column; /* Align items in column direction */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+/* Increase the font size of the 'Successfully Booked' <p> element */
+.notification-inner-content p:first-of-type {
+    font-size: 1.5rem; /* Adjust the font size as desired */
+    font-weight: bold; /* Make the text bold */
+}
+/* Style for the close button */
+.close-button {
+    position: absolute; /* Positioning relative to the notification content */
+    top: 10px; /* 10px from the top */
+    right: 10px; /* 10px from the right */
+    background: none; /* No background */
+    border: none; /* No border */
+    font-size: 24px; /* Font size for the cross mark */
+    cursor: pointer; /* Pointer cursor */
+    color: #000; /* Color of the cross mark */
+}
+/* Style for the car SVG */
+.car-svg {
+    margin-bottom: 20px; /* Margin below the SVG image */
+}
+
+/* Style for the notification message */
+.notification-content p {
+    margin-top: 20px; /* Margin at the top */
+    font-size: 1.1rem; /* Adjust the font size */
+}
+
+.notification-content a {
+    font-weight: bold; /* Link color */
+    color: black;
+    text-decoration: none; /* Underline links */
 }
