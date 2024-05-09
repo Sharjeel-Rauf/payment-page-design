@@ -518,7 +518,6 @@ body {
 
 
 
-
 /* Style for the notification container */
 .notification-container {
     display: none; /* Initially hidden */
@@ -532,6 +531,7 @@ body {
     justify-content: center; /* Center content horizontally */
     z-index: 1000; /* Ensure it's on top */
 }
+
 /* Style for the notification content */
 .notification-content {
     background-color: #fff; /* White background */
@@ -539,8 +539,10 @@ body {
     border-radius: 8px; /* Rounded corners */
     text-align: center; /* Center-align text */
     width: 80%; /* Adjust the width as desired */
-    max-width: 500px;
+    max-width: 500px; /* Limit the max width */
+    height: auto; /* Allow the height to be auto */
     max-height: 80%; /* Allow max height to adjust with content */
+    overflow: hidden; /* Hide overflow */
     display: flex; /* Use Flexbox */
     flex-direction: column; /* Align items in column direction */
     justify-content: center; /* Center content vertically */
@@ -550,11 +552,13 @@ body {
 
 /* Style for the inner notification content */
 .notification-inner-content {
-    width: 80%; /* Set the width to half of the parent container */
+    width: 100%; /* Full width within parent container */
+    padding: 20px; /* Equal padding on all sides */
     display: flex; /* Use Flexbox */
     flex-direction: column; /* Align items in column direction */
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
+    overflow: hidden; /* Hide overflow */
 }
 
 /* Increase the font size of the 'Successfully Booked' <p> element */
@@ -562,6 +566,7 @@ body {
     font-size: 1.5rem; /* Adjust the font size as desired */
     font-weight: bold; /* Make the text bold */
 }
+
 /* Style for the close button */
 .close-button {
     position: absolute; /* Positioning relative to the notification content */
@@ -573,9 +578,10 @@ body {
     cursor: pointer; /* Pointer cursor */
     color: #000; /* Color of the cross mark */
 }
-/* Style for the car SVG */
+
+/* Style for the car PNG */
 .car-svg {
-    margin-bottom: 20px; /* Margin below the SVG image */
+    margin-bottom: 20px; /* Margin below the PNG image */
 }
 
 /* Style for the notification message */
