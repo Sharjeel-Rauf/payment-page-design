@@ -55,9 +55,10 @@ This is a simple payment page designed and implemented using HTML and CSS. It al
 - Create a pull request.
 
 
-## License
+## Project Image
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+
+![Project image](https://raw.githubusercontent.com/Sharjeel-Rauf/payment-page-design/b40b930dec92c5a364cdd367c9d43cb9b6c5efc5/project_pic.png)
 
 ## Contact
 
